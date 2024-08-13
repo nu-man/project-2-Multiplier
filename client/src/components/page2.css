@@ -1,0 +1,143 @@
+.custom-card {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.title {
+    color: #71717A !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 18px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+.number{
+    color: #7C3A84;
+
+/* Bold/21px */
+font-family: "Plus Jakarta Sans";
+font-size: 21px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 152.381% */
+}
+
+.top-forum{
+    color: #7C3A84;
+
+/* Bold/16px */
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+
+}
+
+.days{
+    color: #606368;
+
+
+
+/* Semi-bold/11px */
+font-family: "Plus Jakarta Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 166.667% */
+}
+
+.custom-span{
+    color: #606368;
+
+/* Semi-bold/13px */
+font-family: "Plus Jakarta Sans";
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px; /* 161.538% */
+}
+ .custom-span2{
+    color: #606368;
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 21px; /* 131.25% */
+padding: 15px;
+ }
+.custom-number{
+    color: #7C3A84;
+text-align: right;
+
+/* Semi-bold/13px */
+font-family: "Plus Jakarta Sans";
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px; /* 161.538% */
+}
+ .custom-hr{
+margin-left: 20px;
+    width: 80%;
+ }
+
+ .custom-card2{
+    padding: 10px;
+    width: auto;
+height: 350px;
+
+ }
+
+ .top-drugs{
+    color: #71717A;
+
+/* Bold/16px */
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+padding: 10px;
+ }
+
+ .profile-name{
+    color: #7C3A84;
+font-family: Inter;
+font-size: 19.059px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-left:20px;
+ }
+
+ .rivew{
+    color: #8C8D90;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%;
+height: 71px;
+flex-shrink: 0;
+align-self: stretch; /* 24.776px */
+ }
+
+ .c-button{
+    color: var(--Primary-700, #ad33079d);
+    display: flex;
+    width: 98px;
+    height: 30px;
+    padding: 0px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #f4beab;
+ }

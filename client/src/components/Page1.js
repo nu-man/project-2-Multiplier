@@ -6,7 +6,6 @@ import {
   Col,
   Card,
   Form,
-  InputGroup,
   Navbar,
   Nav,
 } from "react-bootstrap";
@@ -94,7 +93,7 @@ export default function Page1() {
           <div >
           <Row>
            <Card className="p-4 m-2">
-              <Row className="">
+              <Row >
                 <Col lg={8} className=" card-heading mb-3">
                   Diabetes type ll
                 </Col>
