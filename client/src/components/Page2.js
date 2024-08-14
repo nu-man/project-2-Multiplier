@@ -8,9 +8,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import "./page2.css"
-import profileIcon from "./assets/profilePic.png"
-
+import "./page2.css";
+import profileIcon from "./assets/profilePic.png";
 
 export default function Page2() {
   const data = [
@@ -37,8 +36,7 @@ export default function Page2() {
     <div className="chart-container">
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>
-          <XAxis dataKey="name" tickFormatter={(value) => value} />
-
+          <XAxis dataKey="name" tickFormatter={(value) => value} />  
           <Tooltip />
           <Bar dataKey="value" fill="#7C3A848C" barSize={50} />
         </BarChart>
@@ -81,19 +79,19 @@ export default function Page2() {
           <Col lg={3}>
             <Card className="p-2 m-2">
               <div className="title">TOTAL DISCUSSIONS</div>
-              <div  className="number">2,38,485</div>
+              <div className="number">2,38,485</div>
             </Card>
           </Col>
           <Col lg={3}>
             <Card className="p-2 m-2">
               <div className="title">TOTAL COMMENTS</div>
-              <div  className="number">50,000,000</div>
+              <div className="number">50,000,000</div>
             </Card>
           </Col>
           <Col lg={3}>
             <Card className="p-2 m-2">
               <div className="title">TOTAL UNIQUE COMMENTERS</div>
-              <div  className="number">33,493</div>
+              <div className="number">33,493</div>
             </Card>
           </Col>
         </Row>
@@ -111,20 +109,18 @@ export default function Page2() {
                 </Col>
                 <Col lg={8}>Reddit</Col>
                 <Col lg={4}>100</Col>
-                <hr className="custom-hr"/>
+                <hr className="custom-hr" />
                 <Col lg={8}>Reddit</Col>
                 <Col lg={4}>100 </Col>
-                <hr className="custom-hr"/>
+                <hr className="custom-hr" />
                 <Col lg={8}>Reddit</Col>
                 <Col lg={4}>100</Col>
-                <hr className="custom-hr"/>
+                <hr className="custom-hr" />
                 <Col lg={8}>Reddit</Col>
                 <Col lg={4}>100</Col>
-                <hr className="custom-hr"/>
+                <hr className="custom-hr" />
               </Row>
-              <Row>
-                
-              </Row>
+              <Row></Row>
             </Card>
           </Col>
           <Col lg={9}>
@@ -164,34 +160,70 @@ export default function Page2() {
           </div>
         </Card>
         <Row>
-          <Col lg={8}  className="custom-span2">Top Discussion</Col>
-          <Col lg={4}  className="custom-span2"> Filter by platform</Col>
+          <Col lg={8} className="custom-span2">
+            Top Discussion
+          </Col>
+          <Col lg={4} className="custom-span2">
+            {" "}
+            Filter by platform
+          </Col>
         </Row>
-        
       </Container>
       <Container className="custom-container">
-      <Row className="m-3">
-      <Card className="p-4 custom-card3">
-        <div> <img src={profileIcon} alt="profile pic"></img><span className="profile-name">GraavyNoodles</span></div>
-          <span className="rivew">I've been on Metformin for 6 months, and it has helped lower my A1C levels significantly. When I was first diagnosed with type 2 diabetes, my A1C was around 8.5%, which was quite concerning. My doctor prescribed Metformin, starting with a low dose to minimize any potential side effects. Over time, we gradually increased the dosage to find the right balance that works for me</span>
-          <div className="c-button">Button</div>
-        </Card>
-      </Row>
-      <Row className="m-3">
-      <Card className="p-4 custom-card3">
-        <div> <img src={profileIcon} alt="profile pic"></img><span className="profile-name">GraavyNoodles</span></div>
-          <span className="rivew">I've been on Metformin for 6 months, and it has helped lower my A1C levels significantly. When I was first diagnosed with type 2 diabetes, my A1C was around 8.5%, which was quite concerning. My doctor prescribed Metformin, starting with a low dose to minimize any potential side effects. Over time, we gradually increased the dosage to find the right balance that works for me</span>
-          <div className="c-button">Button</div>
+        <Row className="m-3">
+          <Card className="p-4 custom-card3">
+            <div>
+              {" "}
+              <img src={profileIcon} alt="profile pic"></img>
+              <span className="profile-name">GraavyNoodles</span>
+            </div>
+            <span className="rivew">
+              I've been on Metformin for 6 months, and it has helped lower my
+              A1C levels significantly. When I was first diagnosed with type 2
+              diabetes, my A1C was around 8.5%, which was quite concerning. My
+              doctor prescribed Metformin, starting with a low dose to minimize
+              any potential side effects. Over time, we gradually increased the
+              dosage to find the right balance that works for me
+            </span>
+            <div className="c-button">Button</div>
           </Card>
-      </Row>
-      <Row className="m-3">
-      <Card className="p-4 custom-card3">
-        <div> <img src={profileIcon} alt="profile pic"></img><span className="profile-name">GraavyNoodles</span></div>
-          <span className="rivew">I've been on Metformin for 6 months, and it has helped lower my A1C levels significantly. When I was first diagnosed with type 2 diabetes, my A1C was around 8.5%, which was quite concerning. My doctor prescribed Metformin, starting with a low dose to minimize any potential side effects. Over time, we gradually increased the dosage to find the right balance that works for me</span>
-          <div className="c-button">Button</div>
-        </Card>
-      </Row>
-       
+        </Row>
+        <Row className="m-3">
+          <Card className="p-4 custom-card3">
+            <div>
+              {" "}
+              <img src={profileIcon} alt="profile pic"></img>
+              <span className="profile-name">GraavyNoodles</span>
+            </div>
+            <span className="rivew">
+              I've been on Metformin for 6 months, and it has helped lower my
+              A1C levels significantly. When I was first diagnosed with type 2
+              diabetes, my A1C was around 8.5%, which was quite concerning. My
+              doctor prescribed Metformin, starting with a low dose to minimize
+              any potential side effects. Over time, we gradually increased the
+              dosage to find the right balance that works for me
+            </span>
+            <div className="c-button">Button</div>
+          </Card>
+        </Row>
+        <Row className="m-3">
+          <Card className="p-4 custom-card3">
+            <div>
+              {" "}
+              <img src={profileIcon} alt="profile pic"></img>
+              <span className="profile-name">GraavyNoodles</span>
+            </div>
+            <span className="rivew">
+              I've been on Metformin for 6 months, and it has helped lower my
+              A1C levels significantly. When I was first diagnosed with type 2
+              diabetes, my A1C was around 8.5%, which was quite concerning. My
+              doctor prescribed Metformin, starting with a low dose to minimize
+              any potential side effects. Over time, we gradually increased the
+              dosage to find the right balance that works for me
+            </span>
+            <div className="c-button">Button</div>
+          </Card>
+        </Row>
       </Container>
     </>
   );
