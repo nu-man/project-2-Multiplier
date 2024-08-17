@@ -20,12 +20,12 @@
 .number{
     color: #7C3A84;
 
-/* Bold/21px */
-font-family: "Plus Jakarta Sans";
-font-size: 21px;
-font-style: normal;
-font-weight: 700;
-line-height: 32px; /* 152.381% */
+    /* Bold/21px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 152.381% */
 }
 
 .top-forum{
@@ -94,6 +94,14 @@ margin-left: 20px;
 height: 350px;
 
  }
+ .custom-card3{
+    position: relative;
+ }
+ .custom-card3 span {
+    margin-top: 15px;
+    font-size: 1.2vw;
+}
+
 
  .top-drugs{
     color: #71717A;
@@ -129,15 +137,85 @@ flex-shrink: 0;
 align-self: stretch; /* 24.776px */
  }
 
- .c-button{
+
+
+ .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  .nav-title{color: #7C3A84;
+    font-feature-settings: 'cv03' on, 'cv04' on;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%; /* 36.25px */}
+
+    .signout{
+        color: #7C3A84;
+text-align: center;
+font-feature-settings: 'cv01' on, 'cv03' on, 'cv04' on;
+
+/* Paragraph/Medium/Semibold */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 145%; /* 23.2px */
+    }
+  
+    .top-forum{
+        color: #7C3A84;
+
+/* Bold/16px */
+padding: 10px 20px;
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+    }
+
+    .forum-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        color: #606368;
+
+/* Bold/16px */
+font-family: "Plus Jakarta Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+    }
+
+.custom-button{
     color: var(--Primary-700, #ad33079d);
     display: flex;
-    width: 98px;
+    cursor: pointer;
     height: 30px;
     padding: 0px 8px;
+    border-radius: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
     background-color: #f4beab;
- }
+    width: fit-content;
+    margin-top: 10px;
+    border: none;
+
+    
+}
+.yaxis-text{
+    font-size: 1vh;
+}
+
+.my-button{
+    cursor: pointer;
+}
+

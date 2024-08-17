@@ -1,14 +1,6 @@
 import React from "react";
 import arrowicon from "./assets/ArrowUp.png";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Form,
-  Navbar,
-  Nav,
-} from "react-bootstrap";
+import { Container, Row, Col, Card, Form, Navbar, Nav } from "react-bootstrap";
 import "./page1.css";
 
 export default function Page1() {
@@ -35,14 +27,13 @@ export default function Page1() {
         </Navbar>
       </Container>
       <hr />
-      <Container>
+      <Container className="mt-5">
         <div className="custom-title">
           <span>Select your indication</span>
         </div>
         <div className="custom-subtitle">
           <span>Filter through “disease” “platform” etc</span>
         </div>
-
         <Row>
           <Col lg={4} className="p-3 mt-5">
             <Card className="p-3 m-2 custom-card-height">
@@ -52,7 +43,9 @@ export default function Page1() {
                   <Form.Group>
                     <Form.Label className="form-label">Label</Form.Label>
                     <Form.Control as="select" className="input-background">
-                      <option value="option1" ><span className="input-text">Placeholder</span></option>
+                      <option value="option1">
+                        <span className="input-text">Placeholder</span>
+                      </option>
                     </Form.Control>
                   </Form.Group>
                 </Form>
@@ -90,125 +83,131 @@ export default function Page1() {
             </Card>
           </Col>
           <Col lg={8} className="p-3 mt-5">
-          <div >
-          <Row>
-           <Card className="p-4 m-2">
-              <Row >
-                <Col lg={8} className=" card-heading mb-3">
-                  Diabetes type ll
-                </Col>
-                <Col lg={4} className="last-7">Last 7 days</Col>
-              </Row>
+            <div>
               <Row>
-                <Col lg={3} className="card-divided">
-                  Total forums
-                  <br />
-                  <div className="numbers">18</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Discussions
-                  <br />
-                  
-                 <div className="numbers">
-                 <img
-                    src={arrowicon}
-                    alt="Arrow Icon"
-                    style={{ width: "20px", height: "20px" }}
-                  /> 1.5L</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Top Drugs
-                  <br />
-                  <div className="dot-1"></div>
-                  Ozmepic
-                  <br />
-                  <div className="dot-2"></div>Wegovy
-                </Col>
+                <Card className="p-4 m-2">
+                  <Row>
+                    <Col lg={8} className=" card-heading mb-3">
+                      Diabetes type ll
+                    </Col>
+                    <Col lg={4} className="last-7">
+                      Last 7 days
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={3} className="card-divided">
+                      Total forums
+                      <br />
+                      <div className="numbers">18</div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Discussions
+                      <br />
+                      <div className="numbers">
+                        <img
+                          src={arrowicon}
+                          alt="Arrow Icon"
+                          style={{ width: "20px", height: "20px" }}
+                        />{" "}
+                        1.5L
+                      </div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Top Drugs
+                      <br />
+                      <div className="dot-1"></div>
+                      Ozmepic
+                      <br />
+                      <div className="dot-2"></div>Wegovy
+                    </Col>
+                  </Row>
+                </Card>
               </Row>
-            </Card>
-           </Row>
-          </div>
-          <div >
-          <Row>
-           <Card className="p-4 m-2">
-              <Row className="">
-                <Col lg={8} className=" card-heading mb-3">
-                  Diabetes type ll
-                </Col>
-                <Col lg={4} className="last-7">Last 7 days</Col>
-              </Row>
+            </div>
+            <div>
               <Row>
-                <Col lg={3} className="card-divided">
-                  Total forums
-                  <br />
-                  <div className="numbers">18</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Discussions
-                  <br />
-                  
-                 <div className="numbers">
-                 <img
-                    src={arrowicon}
-                    alt="Arrow Icon"
-                    style={{ width: "20px", height: "20px" }}
-                  /> 1.5L</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Top Drugs
-                  <br />
-                  <div className="dot-1"></div>
-                  Ozmepic
-                  <br />
-                  <div className="dot-2"></div>Wegovy
-                </Col>
+                <Card className="p-4 m-2">
+                  <Row className="">
+                    <Col lg={8} className=" card-heading mb-3">
+                      Major depressive disorder
+                    </Col>
+                    <Col lg={4} className="last-7">
+                      Last 7 days
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={3} className="card-divided">
+                      Total forums
+                      <br />
+                      <div className="numbers">18</div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Discussions
+                      <br />
+                      <div className="numbers">
+                        <img
+                          src={arrowicon}
+                          alt="Arrow Icon"
+                          style={{ width: "20px", height: "20px" }}
+                        />{" "}
+                        1.5L
+                      </div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Top Drugs
+                      <br />
+                      <div className="dot-1"></div>
+                      Celexa
+                      <br />
+                      <div className="dot-2"></div>Lexapro
+                    </Col>
+                  </Row>
+                </Card>
               </Row>
-            </Card>
-           </Row>
-          </div>
-          <div >
-          <Row>
-           <Card className="p-4 m-2">
-              <Row className="">
-                <Col lg={8} className=" card-heading mb-3">
-                  Diabetes type ll
-                </Col>
-                <Col lg={4} className="last-7">Last 7 days</Col>
-              </Row>
+            </div>
+            <div>
               <Row>
-                <Col lg={3} className="card-divided">
-                  Total forums
-                  <br />
-                  <div className="numbers">18</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Discussions
-                  <br />
-                  
-                 <div className="numbers">
-                 <img
-                    src={arrowicon}
-                    alt="Arrow Icon"
-                    style={{ width: "20px", height: "20px" }}
-                  /> 1.5L</div>
-                </Col>
-                <Col lg={3} className="card-divided">
-                  Top Drugs
-                  <br />
-                  <div className="dot-1"></div>
-                  Ozmepic
-                  <br />
-                  <div className="dot-2"></div>Wegovy
-                </Col>
+                <Card className="p-4 m-2">
+                  <Row className="">
+                    <Col lg={8} className=" card-heading mb-3">
+                      Schizophrenia
+                    </Col>
+                    <Col lg={4} className="last-7">
+                      Last 7 days
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col lg={3} className="card-divided">
+                      Total forums
+                      <br />
+                      <div className="numbers">18</div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Discussions
+                      <br />
+                      <div className="numbers">
+                        <img
+                          src={arrowicon}
+                          alt="Arrow Icon"
+                          style={{ width: "20px", height: "20px" }}
+                        />{" "}
+                        1.5L
+                      </div>
+                    </Col>
+                    <Col lg={3} className="card-divided">
+                      Top Drugs
+                      <br />
+                      <div className="dot-1"></div>
+                      Haldol
+                      <br />
+                      <div className="dot-2"></div>Prolixine
+                    </Col>
+                  </Row>
+                </Card>
               </Row>
-            </Card>
-           </Row>
-          </div>
-         
-           
+            </div>
           </Col>
-          
-        </Row> 
+        </Row>
       </Container>
     </>
   );
