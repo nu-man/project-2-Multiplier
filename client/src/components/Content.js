@@ -87,7 +87,6 @@ export default function Content() {
                       </div>
                     ))}
                   </Col>
-
                   <Col lg={6}>
                     {[
                       { name: "Levemir", percentage: "5.7%" },
