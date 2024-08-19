@@ -207,34 +207,34 @@ export default function Page2() {
         </div>
         <hr />
         <Container>
-        <Row>
-          <Col lg={3}>
-            <Card className="p-2 m-2">
-              <div className="title">TOTAL FORUMS</div>
-              <div className="number">20</div>
-            </Card>
-          </Col>
+          <Row>
+            <Col lg={3}>
+              <Card className="p-2 m-2">
+                <div className="title">TOTAL FORUMS</div>
+                <div className="number">20</div>
+              </Card>
+            </Col>
 
-          <Col lg={3}>
-            <Card className="p-2 m-2">
-              <div className="title">TOTAL DISCUSSIONS</div>
-              <div className="number">1,20,000</div>
-            </Card> 
-          </Col>
-          <Col lg={3}>
-            <Card className="p-2 m-2">
-              <div className="title">TOTAL COMMENTS</div>
-              <div className="number">11,000,000</div>
-            </Card>
-          </Col>
-          <Col lg={3}>
-            <Card className="p-2 m-2">
-              <div className="title">AVG ENGAGEMENT</div>
-              <div className="number">8/thread</div>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+            <Col lg={3}>
+              <Card className="p-2 m-2">
+                <div className="title">TOTAL DISCUSSIONS</div>
+                <div className="number">1,20,000</div>
+              </Card>
+            </Col>
+            <Col lg={3}>
+              <Card className="p-2 m-2">
+                <div className="title">TOTAL COMMENTS</div>
+                <div className="number">11,000,000</div>
+              </Card>
+            </Col>
+            <Col lg={3}>
+              <Card className="p-2 m-2">
+                <div className="title">AVG ENGAGEMENT</div>
+                <div className="number">8/thread</div>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
         <Container>
           <Row>
             <Col lg={4}>
@@ -326,7 +326,6 @@ export default function Page2() {
               <Card
                 className="p-4 m-3 my-button"
                 onClick={() => handleCardClick("Communications bucket")}
-                
               >
                 <div className="title">Communications bucket</div>
               </Card>
@@ -349,24 +348,24 @@ export default function Page2() {
             </Col>
           </Row>
         </Container>
-       <Container>
-      <Card>
-      <ResponsiveContainer width="100%" height={300}>
-  <BarChart layout="vertical" data={data2}>
-    <XAxis type="number" />
-    <YAxis
-      dataKey="name"
-      type="category"
-      className="yaxis-text"
-      tick={{ fill: '#000', fontSize: '10px' }}
-      width={200} // Increase width if necessary
-    />
-    <Tooltip />
-    <Bar dataKey="value" fill="#7C3A84d8" />
-  </BarChart>
-</ResponsiveContainer>
-      </Card>
-       </Container>
+        <Container>
+          <Card>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart layout="vertical" data={data2}>
+                <XAxis type="number" />
+                <YAxis
+                  dataKey="name"
+                  type="category"
+                  className="yaxis-text"
+                  tick={{ fill: "#000", fontSize: "10px" }}
+                  width={200} // Increase width if necessary
+                />
+                <Tooltip />
+                <Bar dataKey="value" fill="#7C3A84d8" />
+              </BarChart>
+            </ResponsiveContainer>
+          </Card>
+        </Container>
 
         <Container className="custom-container">
           {filteredComments.map((comment, index) => (

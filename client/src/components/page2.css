@@ -8,7 +8,6 @@
 
 .title {
     color: #71717A !important;
-    font-family: "Plus Jakarta Sans", sans-serif !important;
     font-size: 11px !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -17,183 +16,203 @@
     text-transform: uppercase !important;
 }
 
-.number{
+.number {
     color: #7C3A84;
 
     /* Bold/21px */
+  
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 152.381% */
+}
+
+.top-forum {
+    color: #7C3A84;
+
+    /* Bold/16px */
     font-family: "Plus Jakarta Sans";
-    font-size: 21px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 152.381% */
+    line-height: 24px;
+    /* 150% */
+
 }
 
-.top-forum{
+.days {
+    color: #606368;
+
+
+
+    /* Semi-bold/11px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+}
+
+.custom-span {
+    color: #606368;
+
+    /* Semi-bold/13px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    /* 161.538% */
+}
+
+.custom-span2 {
+    color: #606368;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /* 131.25% */
+    padding: 15px;
+}
+
+.custom-number {
     color: #7C3A84;
+    text-align: right;
 
-/* Bold/16px */
-font-family: "Plus Jakarta Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px; /* 150% */
-
+    /* Semi-bold/13px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    /* 161.538% */
 }
 
-.days{
-    color: #606368;
-
-
-
-/* Semi-bold/11px */
-font-family: "Plus Jakarta Sans";
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; /* 166.667% */
-}
-
-.custom-span{
-    color: #606368;
-
-/* Semi-bold/13px */
-font-family: "Plus Jakarta Sans";
-font-size: 13px;
-font-style: normal;
-font-weight: 500;
-line-height: 21px; /* 161.538% */
-}
- .custom-span2{
-    color: #606368;
-font-family: "Plus Jakarta Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 21px; /* 131.25% */
-padding: 15px;
- }
-.custom-number{
-    color: #7C3A84;
-text-align: right;
-
-/* Semi-bold/13px */
-font-family: "Plus Jakarta Sans";
-font-size: 13px;
-font-style: normal;
-font-weight: 500;
-line-height: 21px; /* 161.538% */
-}
- .custom-hr{
-margin-left: 20px;
+.custom-hr {
+    margin-left: 20px;
     width: 80%;
- }
+}
 
- .custom-card2{
+.custom-card2 {
     padding: 10px;
     width: auto;
-height: 350px;
+    height: 350px;
 
- }
- .custom-card3{
+}
+
+.custom-card3 {
     position: relative;
- }
- .custom-card3 span {
+}
+
+.custom-card3 span {
     margin-top: 15px;
     font-size: 1.2vw;
 }
 
 
- .top-drugs{
+.top-drugs {
     color: #71717A;
 
-/* Bold/16px */
-font-family: "Plus Jakarta Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px; /* 150% */
-padding: 10px;
- }
+    /* Bold/16px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+    padding: 10px;
+}
 
- .profile-name{
+.profile-name {
     color: #7C3A84;
-font-family: Inter;
-font-size: 19.059px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-left:20px;
- }
+    font-family: Inter;
+    font-size: 19.059px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 20px;
+}
 
- .rivew{
+.rivew {
     color: #8C8D90;
-font-family: Inter;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%;
-height: 71px;
-flex-shrink: 0;
-align-self: stretch; /* 24.776px */
- }
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    height: 71px;
+    flex-shrink: 0;
+    align-self: stretch;
+    /* 24.776px */
+}
 
 
 
- .nav-container {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-  }
-  .nav-title{color: #7C3A84;
+}
+
+.nav-title {
+    color: #7C3A84;
     font-feature-settings: 'cv03' on, 'cv04' on;
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
-    line-height: 145%; /* 36.25px */}
+    line-height: 145%;
+    /* 36.25px */
+}
 
-    .signout{
-        color: #7C3A84;
-text-align: center;
-font-feature-settings: 'cv01' on, 'cv03' on, 'cv04' on;
+.signout {
+    color: #7C3A84;
+    text-align: center;
+    font-feature-settings: 'cv01' on, 'cv03' on, 'cv04' on;
 
-/* Paragraph/Medium/Semibold */
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 145%; /* 23.2px */
-    }
-  
-    .top-forum{
-        color: #7C3A84;
+    /* Paragraph/Medium/Semibold */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%;
+    /* 23.2px */
+}
 
-/* Bold/16px */
-padding: 10px 20px;
-font-family: "Plus Jakarta Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px; /* 150% */
-    }
+.top-forum {
+    color: #7C3A84;
 
-    .forum-container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
-        color: #606368;
+    /* Bold/16px */
+    padding: 10px 20px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 150% */
+}
 
-/* Bold/16px */
-font-family: "Plus Jakarta Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
-    }
+.forum-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    color: #606368;
 
-.custom-button{
+    /* Bold/16px */
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+}
+
+.custom-button {
     color: var(--Primary-700, #ad33079d);
     display: flex;
     cursor: pointer;
@@ -209,13 +228,13 @@ line-height: 24px; /* 150% */
     margin-top: 10px;
     border: none;
 
-    
+
 }
-.yaxis-text{
+
+.yaxis-text {
     font-size: 1vh;
 }
 
-.my-button{
+.my-button {
     cursor: pointer;
 }
-

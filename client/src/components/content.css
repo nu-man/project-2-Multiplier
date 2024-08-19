@@ -1,0 +1,33 @@
+
+.nav-title2{
+    color: #7C3A84;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 145%;
+    margin-left: 50px;
+    /* 36.25px */
+}
+.menu-container{
+    color: #71717A ;
+    font-size: 11px ;
+    font-style: normal ;
+    font-weight: 500 ;
+    line-height: 18px ;
+    letter-spacing: 1px ;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.card-title{
+    color: #7C3A84;
+}
+.segment{
+    color: #606368;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px 0px;
+}
