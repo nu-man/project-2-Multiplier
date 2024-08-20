@@ -31,3 +31,28 @@
     line-height: 24px;
     padding: 10px 0px;
 }
+
+.menu-container{
+    margin-right: 7px;
+}
+
+.lower-title {
+    color: #7C3A84;
+    padding: 10px 20px;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.lower-container {
+    color: #606368;
+    padding: 10px 20px; /* Adjusted padding to match the title */
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify; /* Ensures text alignment within the container */
+}

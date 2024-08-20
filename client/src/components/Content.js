@@ -14,7 +14,16 @@ export default function Content() {
       <Container fluid>
         <div className="nav-container">
           <span className="nav-title2">Content</span>
-          <div>
+          <div className="mt-2 p-1 filter-container">
+            <form>
+              <select id="disease" name="disease" className="forum-container">
+                <option value="" disabled selected>
+                  Filter by disease
+                </option>
+                <option value="disease1">Disease 1</option>
+                <option value="disease2">Disease 2</option>
+              </select>
+            </form>
             <span className="menu-container">Support</span>
             <span className="menu-container" onClick={communicationHandler}>
               Communications
@@ -22,8 +31,9 @@ export default function Content() {
             <span className="menu-container">Product</span>
             <span className="menu-container">Trial</span>
           </div>
-        </div>
-        <hr />
+            
+          </div>
+        
         <Container>
           <Row>
             <Col lg={3}>
@@ -61,7 +71,7 @@ export default function Content() {
                 <span className="forum-container">Website</span>
                 <span className="forum-container">Ads</span>
                 <span className="forum-container">Brouchure</span>
-                <span className="forum-container">Verbal commmunications</span>
+                <span className="forum-container">Verbal communications</span>
               </Card>
             </Col>
             <Col lg={8}>
@@ -111,6 +121,32 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
+        <Container className="mb-3">
+  <div>
+    <Card className="p-3 mt-4">
+      <span className="lower-title">WEBSITE</span> 
+      <span className="lower-container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+      </span>
+      
+      <span className="lower-title">ADS</span>
+      <span className="lower-container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+      </span>
+      
+      <span className="lower-title">BROCHURE</span>
+      <span className="lower-container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+      </span>
+      
+      <span className="lower-title">VERBAL COMMUNICATIONS</span>
+      <span className="lower-container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+      </span>
+    </Card>
+  </div>
+</Container>
+
       </Container>
     </>
   );

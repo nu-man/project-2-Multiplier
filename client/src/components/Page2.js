@@ -176,17 +176,17 @@ export default function Page2() {
   ];
   const data2 = [
     { name: "Paperwork Support", value: 22.1 },
-    { name: "Co-Pay Cards and Financial Support", value: 3.8 },
-    { name: "Nurse Training Support", value: 1.1 },
-    { name: "Diversity and Inclusion in Trials", value: 0.9 },
-    { name: "Transparency in Clinical Trials", value: 1.7 },
-    { name: "Physician-Patient Interaction in Trials", value: 2.4 },
+    { name: "Bureaucracy and Accessibility Challenges", value: 12.1 },
+    { name: "Sentiment on Clinical Trials (Transparency, Burden)", value: 5.2 },
     {
       name: "Perceived Level of Patient-Centricity (High, Medium, Low)",
       value: 5.2,
     },
-    { name: "Bureaucracy and Accessibility Challenges", value: 12.1 },
-    { name: "Sentiment on Clinical Trials (Transparency, Burden)", value: 5.2 },
+    { name: "Co-Pay Cards and Financial Support", value: 3.8 },
+    { name: "Physician-Patient Interaction in Trials", value: 2.4 },
+    { name: "Transparency in Clinical Trials", value: 1.7 },
+    { name: "Nurse Training Support", value: 1.1 },
+    { name: "Diversity and Inclusion in Trials", value: 0.9 },
   ];
 
   const handleCardClick = (topic) => {
@@ -203,9 +203,21 @@ export default function Page2() {
       <Container fluid>
         <div className="nav-container">
           <span className="nav-title">Patient Centricity</span>
-          <span className="signout">Sign out</span>
+          <div className="mt-2 p-3 filter-container">
+            <form>
+              <select id="disease" name="disease" className="forum-container">
+                <option value="" disabled selected>
+                  Filter by disease
+                </option>
+                <option value="disease1">Disease 1</option>
+                <option value="disease2">Disease 2</option>
+              </select>
+            </form>
+            <span className="signout">Sign out</span>
+          </div>
+
         </div>
-        <hr />
+        
         <Container>
           <Row>
             <Col lg={3}>
@@ -235,7 +247,7 @@ export default function Page2() {
             </Col>
           </Row>
         </Container>
-        <Container>
+        <Container className="mt-2 p-3">
           <Row>
             <Col lg={4}>
               <Card className="mt-4 p-3">
@@ -311,9 +323,32 @@ export default function Page2() {
             </Col>
           </Row>
         </Container>
-
+        <Container className="mt-2 p-3">
+          <Card>
+            <span className="title p-3">
+              Most frequent topics from topic modelling analysis, with
+              percentage of total text responses associated with that topic
+            </span>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart layout="vertical" data={data2}>
+                <XAxis type="number" />
+                <YAxis
+                  dataKey="name"
+                  type="category"
+                  className="yaxis-text"
+                  tick={{ fill: "#000", fontSize: "12px" }}
+                  width={230} // Increase width if necessary
+                />
+                <Tooltip />
+                <Bar dataKey="value" fill="#7C3A84d8" />
+              </BarChart>
+            </ResponsiveContainer>
+          </Card>
+        </Container>
         <Container>
-          <Row className="mt-4">
+        
+
+          <Row className="mt-2">
             <Col lg={3}>
               <Card
                 className={`p-4 m-3 my-button `}
@@ -347,24 +382,6 @@ export default function Page2() {
               </Card>
             </Col>
           </Row>
-        </Container>
-        <Container>
-          <Card>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart layout="vertical" data={data2}>
-                <XAxis type="number" />
-                <YAxis
-                  dataKey="name"
-                  type="category"
-                  className="yaxis-text"
-                  tick={{ fill: "#000", fontSize: "10px" }}
-                  width={200} // Increase width if necessary
-                />
-                <Tooltip />
-                <Bar dataKey="value" fill="#7C3A84d8" />
-              </BarChart>
-            </ResponsiveContainer>
-          </Card>
         </Container>
 
         <Container className="custom-container">
