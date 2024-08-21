@@ -158,7 +158,9 @@
     align-items: center;
     padding: 15px 20px;
 }
-
+.forum-container span {
+    margin-right: 10px; /* Adjust space between name and percentage */
+  }
 .nav-title {
     color: #7C3A84;
     font-feature-settings: 'cv03' on, 'cv04' on;
@@ -220,7 +222,6 @@
     width: fit-content;
     margin-top: 10px;
     border: none;
-
 
 }
 

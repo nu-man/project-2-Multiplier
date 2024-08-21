@@ -31,8 +31,7 @@ export default function Content() {
             <span className="menu-container">Product</span>
             <span className="menu-container">Trial</span>
           </div>
-            
-          </div>
+        </div>
         
         <Container>
           <Row>
@@ -63,6 +62,7 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
+        
         <Container>
           <Row>
             <Col lg={4}>
@@ -70,7 +70,7 @@ export default function Content() {
                 <span className="top-forum">SEGMENT</span>
                 <span className="forum-container">Website</span>
                 <span className="forum-container">Ads</span>
-                <span className="forum-container">Brouchure</span>
+                <span className="forum-container">Brochure</span>
                 <span className="forum-container">Verbal communications</span>
               </Card>
             </Col>
@@ -92,7 +92,7 @@ export default function Content() {
                       { name: "Actos", percentage: "6%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
-                        <span>{drug.name}</span>
+                        <span >{drug.name}</span>
                         <span>{drug.percentage}</span>
                       </div>
                     ))}
@@ -111,7 +111,7 @@ export default function Content() {
                       { name: "Steglatro", percentage: "2%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
-                        <span>{drug.name}</span>
+                        <span>{drug.name}</span> 
                         <span>{drug.percentage}</span>
                       </div>
                     ))}
@@ -121,32 +121,32 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
-        <Container className="mb-3">
-  <div>
-    <Card className="p-3 mt-4">
-      <span className="lower-title">WEBSITE</span> 
-      <span className="lower-container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-      </span>
-      
-      <span className="lower-title">ADS</span>
-      <span className="lower-container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-      </span>
-      
-      <span className="lower-title">BROCHURE</span>
-      <span className="lower-container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-      </span>
-      
-      <span className="lower-title">VERBAL COMMUNICATIONS</span>
-      <span className="lower-container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-      </span>
-    </Card>
-  </div>
-</Container>
 
+        <Container className="mb-3">
+          <div>
+            <Card className="p-3 mt-4">
+              <span className="lower-title">WEBSITE</span> 
+              <span className="lower-container">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+              </span>
+              
+              <span className="lower-title">ADS</span>
+              <span className="lower-container">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+              </span>
+              
+              <span className="lower-title">BROCHURE</span>
+              <span className="lower-container">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+              </span>
+              
+              <span className="lower-title">VERBAL COMMUNICATIONS</span>
+              <span className="lower-container">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
+              </span>
+            </Card>
+          </div>
+        </Container>
       </Container>
     </>
   );
