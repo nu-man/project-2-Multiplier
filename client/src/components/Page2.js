@@ -175,18 +175,18 @@ export default function Page2() {
     },
   ];
   const data2 = [
-    { name: "Paperwork Support", value: 22.1 },
-    { name: "Bureaucracy and Accessibility Challenges", value: 12.1 },
-    { name: "Sentiment on Clinical Trials (Transparency, Burden)", value: 5.2 },
+    { name: "Paperwork Support", value:22.1 },
+    { name: "Bureaucracy and Accessibility Challenges", value:12.1 },
+    { name: "Sentiment on Clinical Trials (Transparency, Burden)", value:5.2 },
     {
       name: "Perceived Level of Patient-Centricity (High, Medium, Low)",
-      value: 5.2,
+      value:5.2,
     },
-    { name: "Co-Pay Cards and Financial Support", value: 3.8 },
-    { name: "Physician-Patient Interaction in Trials", value: 2.4 },
-    { name: "Transparency in Clinical Trials", value: 1.7 },
-    { name: "Nurse Training Support", value: 1.1 },
-    { name: "Diversity and Inclusion in Trials", value: 0.9 },
+    { name: "Co-Pay Cards and Financial Support", value:3.8 },
+    { name: "Physician-Patient Interaction in Trials", value:2.4 },
+    { name: "Transparency in Clinical Trials", value:1.7 },
+    { name: "Nurse Training Support", value:1.1 },
+    { name: "Diversity and Inclusion in Trials", value:0.9 },
   ];
 
   const handleCardClick = (topic) => {
@@ -279,18 +279,18 @@ export default function Page2() {
               <Card className="mt-4 p-3">
                 <span className="top-forum">Top drugs</span>
                 <Row>
-                  <Col lg={6}>
+                  <Col lg={4}>
                     {[
-                      { name: "Glucophage", percentage: "15%" },
-                      { name: "Lantus", percentage: "12%" },
-                      { name: "Humalog", percentage: "11%" },
-                      { name: "Januvia", percentage: "10%" },
-                      { name: "Jardiance", percentage: "9%" },
-                      { name: "Victoza", percentage: "8.5%" },
-                      { name: "Invokana", percentage: "7.8%" },
-                      { name: "Farxiga", percentage: "6.9%" },
-                      { name: "Amaryl", percentage: "6.5%" },
-                      { name: "Actos", percentage: "6%" },
+                      { name: "Humalog", percentage: "24%" },
+                      { name: "Novolog", percentage: "16%" },
+                      { name: "Ozempic", percentage: "11%" },
+                      { name: "Glyburide", percentage: "10%" },
+                      { name: "Victoza", percentage: "9%" },
+                      { name: "Apidra", percentage: "8.5%" },
+                      { name: "Byetta", percentage: "7.8%" },
+                      { name: "Trulicity", percentage: "6.9%" },
+                      { name: "Asparat", percentage: "6.5%" },
+                      { name: "Fiasp", percentage: "6%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -299,18 +299,37 @@ export default function Page2() {
                     ))}
                   </Col>
 
-                  <Col lg={6}>
+                  <Col lg={4}>
                     {[
-                      { name: "Levemir", percentage: "5.7%" },
-                      { name: "Onglyza", percentage: "5.3%" },
-                      { name: "Humulin N", percentage: "4.9%" },
-                      { name: "Prandin", percentage: "4.5%" },
-                      { name: "Glyset", percentage: "3.9%" },
-                      { name: "Precose", percentage: "3.5%" },
-                      { name: "Ozempic", percentage: "3.1%" },
-                      { name: "Avandia", percentage: "2.8%" },
-                      { name: "Glucotrol", percentage: "2.4%" },
-                      { name: "Steglatro", percentage: "2%" },
+                      { name: "Metformin", percentage: "15.7%" },
+                      { name: "Levemir", percentage: "15.3%" },
+                      { name: "Glimepride", percentage: "14.9%" },
+                      { name: "Actos", percentage: "14.5%" },
+                      { name: "Jardiance", percentage: "13.9%" },
+                      { name: "Invokana", percentage: "13.5%" },
+                      { name: "Basalgar", percentage: "13.1%" },
+                      { name: "Glyburide", percentage: "12.8%" },
+                      { name: "Glimpepiride", percentage: "12.4%" },
+                      { name: "Amaryl", percentage: "12%" },
+                    ].map((drug, index) => (
+                      <div key={index} className="forum-container">
+                        <span>{drug.name}</span>
+                        <span>{drug.percentage}</span>
+                      </div>
+                    ))}
+                  </Col>
+                  <Col lg={4}>
+                    {[
+                      { name: "Januvia", percentage: "14.3%" },
+                      { name: "Janumet", percentage: "14%" },
+                      { name: "Oseni", percentage: "13.9%" },
+                      { name: "Pioglitazone", percentage: "13.5%" },
+                      { name: "Nesina", percentage: "12.9%" },
+                      { name: "Jentadueto", percentage: "12.5%" },
+                      { name: "Tradjenta", percentage: "10.1%" },
+                      { name: "Onglyza", percentage: "9.8%" },
+                      { name: "Evogliptin", percentage: "9.4%" },
+                      { name: "Omarigliptin", percentage: "8%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -331,7 +350,7 @@ export default function Page2() {
             </span>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart layout="vertical" data={data2}>
-                <XAxis type="number" />
+                <XAxis type="number" tick={false} />
                 <YAxis
                   dataKey="name"
                   type="category"

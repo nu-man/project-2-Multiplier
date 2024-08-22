@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { DiabetesDrugsChart1, DiabetesDrugsChart2 } from './DiabetesDrugsChart';
 import "./content.css";
+import { DiabetesDrugsChart3 } from "./DiabetesDrugsChart";
 
 export default function Content() {
   let navigate = useNavigate();
@@ -32,7 +34,7 @@ export default function Content() {
             <span className="menu-container">Trial</span>
           </div>
         </div>
-        
+
         <Container>
           <Row>
             <Col lg={3}>
@@ -62,7 +64,7 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
-        
+
         <Container>
           <Row>
             <Col lg={4}>
@@ -78,40 +80,60 @@ export default function Content() {
               <Card className="mt-4 p-3">
                 <span className="top-forum">Top drugs</span>
                 <Row>
-                  <Col lg={6}>
+                  <Col lg={4}>
                     {[
-                      { name: "Glucophage", percentage: "15%" },
-                      { name: "Lantus", percentage: "12%" },
-                      { name: "Humalog", percentage: "11%" },
-                      { name: "Januvia", percentage: "10%" },
-                      { name: "Jardiance", percentage: "9%" },
-                      { name: "Victoza", percentage: "8.5%" },
-                      { name: "Invokana", percentage: "7.8%" },
-                      { name: "Farxiga", percentage: "6.9%" },
-                      { name: "Amaryl", percentage: "6.5%" },
-                      { name: "Actos", percentage: "6%" },
+                      { name: "Humalog", percentage: "24%" },
+                      { name: "Novolog", percentage: "16%" },
+                      { name: "Ozempic", percentage: "11%" },
+                      { name: "Glyburide", percentage: "10%" },
+                      { name: "Victoza", percentage: "9%" },
+                      { name: "Apidra", percentage: "8.5%" },
+                      { name: "Byetta", percentage: "7.8%" },
+                      { name: "Trulicity", percentage: "6.9%" },
+                      { name: "Asparat", percentage: "6.5%" },
+                      { name: "Fiasp", percentage: "6%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
-                        <span >{drug.name}</span>
+                        <span>{drug.name}</span>
                         <span>{drug.percentage}</span>
                       </div>
                     ))}
                   </Col>
-                  <Col lg={6}>
+
+                  <Col lg={4}>
                     {[
-                      { name: "Levemir", percentage: "5.7%" },
-                      { name: "Onglyza", percentage: "5.3%" },
-                      { name: "Humulin N", percentage: "4.9%" },
-                      { name: "Prandin", percentage: "4.5%" },
-                      { name: "Glyset", percentage: "3.9%" },
-                      { name: "Precose", percentage: "3.5%" },
-                      { name: "Ozempic", percentage: "3.1%" },
-                      { name: "Avandia", percentage: "2.8%" },
-                      { name: "Glucotrol", percentage: "2.4%" },
-                      { name: "Steglatro", percentage: "2%" },
+                      { name: "Metformin", percentage: "15.7%" },
+                      { name: "Levemir", percentage: "15.3%" },
+                      { name: "Glimepride", percentage: "14.9%" },
+                      { name: "Actos", percentage: "14.5%" },
+                      { name: "Jardiance", percentage: "13.9%" },
+                      { name: "Invokana", percentage: "13.5%" },
+                      { name: "Basalgar", percentage: "13.1%" },
+                      { name: "Glyburide", percentage: "12.8%" },
+                      { name: "Glimpepiride", percentage: "12.4%" },
+                      { name: "Amaryl", percentage: "12%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
-                        <span>{drug.name}</span> 
+                        <span>{drug.name}</span>
+                        <span>{drug.percentage}</span>
+                      </div>
+                    ))}
+                  </Col>
+                  <Col lg={4}>
+                    {[
+                      { name: "Januvia", percentage: "14.3%" },
+                      { name: "Janumet", percentage: "14%" },
+                      { name: "Oseni", percentage: "13.9%" },
+                      { name: "Pioglitazone", percentage: "13.5%" },
+                      { name: "Nesina", percentage: "12.9%" },
+                      { name: "Jentadueto", percentage: "12.5%" },
+                      { name: "Tradjenta", percentage: "10.1%" },
+                      { name: "Onglyza", percentage: "9.8%" },
+                      { name: "Evogliptin", percentage: "9.4%" },
+                      { name: "Omarigliptin", percentage: "8%" },
+                    ].map((drug, index) => (
+                      <div key={index} className="forum-container">
+                        <span>{drug.name}</span>
                         <span>{drug.percentage}</span>
                       </div>
                     ))}
@@ -123,29 +145,25 @@ export default function Content() {
         </Container>
 
         <Container className="mb-3">
-          <div>
-            <Card className="p-3 mt-4">
-              <span className="lower-title">WEBSITE</span> 
-              <span className="lower-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-              </span>
-              
-              <span className="lower-title">ADS</span>
-              <span className="lower-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-              </span>
-              
-              <span className="lower-title">BROCHURE</span>
-              <span className="lower-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-              </span>
-              
-              <span className="lower-title">VERBAL COMMUNICATIONS</span>
-              <span className="lower-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero.
-              </span>
-            </Card>
-          </div>
+          <Row>
+            <Col lg={6}>
+              <Card className="p-3 mt-4">
+                <DiabetesDrugsChart1 /> {/* Render the chart here */}
+              </Card>
+            </Col>
+            <Col lg={6}>
+              <Card className="p-3 mt-4">
+                <DiabetesDrugsChart2 /> {/* Render the chart here */}
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+          <Col lg={6}>
+              <Card className="p-3 mt-4">
+                <DiabetesDrugsChart3 /> {/* Render the chart here */}
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </Container>
     </>

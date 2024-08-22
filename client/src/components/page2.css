@@ -241,3 +241,15 @@
     gap: 20px;
     margin-right: 33px;
 }
+
+.chart-title{
+    color: #71717A !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    line-height: 15px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* In your CSS file */
+
+  
