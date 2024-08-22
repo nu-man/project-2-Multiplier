@@ -1,22 +1,26 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { DiabetesDrugsChart1, DiabetesDrugsChart2 } from './DiabetesDrugsChart';
 import "./content.css";
-import { DiabetesDrugsChart3 } from "./DiabetesDrugsChart";
+import { Verbalcommunications1,Verbalcommunications2,Verbalcommunications3 } from "./VerbalComm";
+import { Brochure1,Brochure2,Brochure3 } from "./Brochure";
 
 export default function Content() {
   let navigate = useNavigate();
-  const communicationHandler = () => {
-    navigate("/communication");
+  const contentHandler = () => {
+    navigate("/content");
   };
+  const summaryHandler = () => {
+    navigate("/page2");
+  };
+
 
   return (
     <>
       <Container fluid>
         <div className="nav-container">
-          <span className="nav-title2">Content</span>
-          <div className="mt-2 p-1 filter-container">
+          <span className="nav-title">Content</span>
+          <div className="mt-2 p-1 filter-container2">
             <form>
               <select id="disease" name="disease" className="forum-container">
                 <option value="" disabled selected>
@@ -26,9 +30,10 @@ export default function Content() {
                 <option value="disease2">Disease 2</option>
               </select>
             </form>
+            <span className="menu-container" onClick={summaryHandler}>Summary</span> 
             <span className="menu-container">Support</span>
-            <span className="menu-container" onClick={communicationHandler}>
-              Communications
+            <span className="menu-container" onClick={contentHandler}>
+              Content
             </span>
             <span className="menu-container">Product</span>
             <span className="menu-container">Trial</span>
@@ -69,16 +74,16 @@ export default function Content() {
           <Row>
             <Col lg={4}>
               <Card className="mt-4 p-3">
-                <span className="top-forum">SEGMENT</span>
+                <span className="top-forum">Segment</span>
                 <span className="forum-container">Website</span>
-                <span className="forum-container">Ads</span>
+                <span className="forum-container">TV Ads</span>
                 <span className="forum-container">Brochure</span>
                 <span className="forum-container">Verbal communications</span>
               </Card>
             </Col>
             <Col lg={8}>
               <Card className="mt-4 p-3">
-                <span className="top-forum">Top drugs</span>
+                <span className="top-forum">Top Brands</span>
                 <Row>
                   <Col lg={4}>
                     {[
@@ -143,28 +148,47 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
-
-        <Container className="mb-3">
+        <Container>
+          <Card>
           <Row>
-            <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart1 /> {/* Render the chart here */}
-              </Card>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Brochure1/>
+           </Card>
             </Col>
-            <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart2 /> {/* Render the chart here */}
-              </Card>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Brochure2/>
+           </Card>
+            </Col>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Brochure3/>
+           </Card>
             </Col>
           </Row>
           <Row>
-          <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart3 /> {/* Render the chart here */}
-              </Card>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Verbalcommunications1/>
+           </Card>
+            </Col>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Verbalcommunications2/>
+           </Card>
+            </Col>
+            <Col lg={4}>
+            <Card className="p-3 m-4">
+            <Verbalcommunications3/>
+           </Card>
             </Col>
           </Row>
+          
+          </Card>
         </Container>
+
+        
       </Container>
     </>
   );

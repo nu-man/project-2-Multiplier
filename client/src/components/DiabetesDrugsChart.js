@@ -60,7 +60,7 @@ const DiabetesDrugsChart = ({ data, title }) => {
             width={80} // Adjust width as needed for label visibility
           />
           <Tooltip />
-          <Bar dataKey="value" fill="#7C3A84d8" />
+          <Bar dataKey="value" fill="#bc7ac4" />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -68,11 +68,11 @@ const DiabetesDrugsChart = ({ data, title }) => {
 };
 
 export const DiabetesDrugsChart1 = () => (
-  <DiabetesDrugsChart data={data} title="Graph for Diabetes and Weightloss" />
+  <DiabetesDrugsChart data={data} title="Diabetes with Weightloss" />
 );
 export const DiabetesDrugsChart2 = () => (
-  <DiabetesDrugsChart data={data2} title="Graph for Type 2 Diabetes" />
+  <DiabetesDrugsChart data={data2} title="Diabetes" />
 );
 export const DiabetesDrugsChart3 = () => (
-  <DiabetesDrugsChart data={data3} title="Graph for Gliptins" />
+  <DiabetesDrugsChart data={data3} title="Gliptins" />
 );
