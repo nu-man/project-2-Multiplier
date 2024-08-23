@@ -2,8 +2,20 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./content.css";
-import { Verbalcommunications1,Verbalcommunications2,Verbalcommunications3 } from "./VerbalComm";
-import { Brochure1,Brochure2,Brochure3 } from "./Brochure";
+import {
+  Verbalcommunications1,
+  Verbalcommunications2,
+  Verbalcommunications3,
+} from "./VerbalComm";
+import { Brochure1, Brochure2, Brochure3 } from "./Brochure";
+import { AdsChart1, AdsChart2, AdsChart3 } from "./AdsChart";
+import { WebsiteChart1, WebsiteChart2, WebsiteChart3 } from "./WebsiteChart";
+import jsonData from "./conversion.json"; // Import your JSON data file
+
+// Function to filter data by category
+const filterDataByCategory = (category) => {
+  return jsonData.filter((item) => item.Category === category);
+};
 
 export default function Content() {
   let navigate = useNavigate();
@@ -14,23 +26,30 @@ export default function Content() {
     navigate("/page2");
   };
 
+  // Filter data for each category
+  const websiteData = filterDataByCategory("Website");
+  const adsData = filterDataByCategory("TV Ads");
+  const brochureData = filterDataByCategory("Brochure");
+  const verbalCommunicationsData = filterDataByCategory("Verbal Communications");
 
   return (
     <>
-      <Container fluid>
+      <Container>
         <div className="nav-container">
-          <span className="nav-title">Content</span>
-          <div className="mt-2 p-1 filter-container2">
+          <span className="nav-title ms-4">Content</span>
+          <div className="mt-2 p-3 filter-container2">
             <form>
               <select id="disease" name="disease" className="forum-container">
                 <option value="" disabled selected>
                   Filter by disease
                 </option>
-                <option value="disease1">Disease 1</option>
+                <option value="disease1">Type 2</option>
                 <option value="disease2">Disease 2</option>
               </select>
             </form>
-            <span className="menu-container" onClick={summaryHandler}>Summary</span> 
+            <span className="menu-container" onClick={summaryHandler}>
+              Summary
+            </span>
             <span className="menu-container">Support</span>
             <span className="menu-container" onClick={contentHandler}>
               Content
@@ -87,16 +106,16 @@ export default function Content() {
                 <Row>
                   <Col lg={4}>
                     {[
-                      { name: "Humalog", percentage: "24%" },
-                      { name: "Novolog", percentage: "16%" },
-                      { name: "Ozempic", percentage: "11%" },
-                      { name: "Glyburide", percentage: "10%" },
-                      { name: "Victoza", percentage: "9%" },
-                      { name: "Apidra", percentage: "8.5%" },
-                      { name: "Byetta", percentage: "7.8%" },
-                      { name: "Trulicity", percentage: "6.9%" },
-                      { name: "Asparat", percentage: "6.5%" },
-                      { name: "Fiasp", percentage: "6%" },
+                      { name: "Humalog", percentage: "5.937%" },
+                      { name: "Novolog", percentage: "4.048%" },
+                      { name: "Ozempic", percentage: "3.797%" },
+                      { name: "Diabeta", percentage: "0.05%" },
+                      { name: "Victoza", percentage: "2.02%" },
+                      { name: "Apidra", percentage: "1.517%" },
+                      { name: "Byetta", percentage: "1.355%" },
+                      { name: "Trulicity", percentage: "1.28%" },
+                      { name: "Aspart", percentage: "0.575%" },
+                      { name: "Fiasp", percentage: "0.363%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -107,16 +126,16 @@ export default function Content() {
 
                   <Col lg={4}>
                     {[
-                      { name: "Metformin", percentage: "15.7%" },
-                      { name: "Levemir", percentage: "15.3%" },
-                      { name: "Glimepride", percentage: "14.9%" },
-                      { name: "Actos", percentage: "14.5%" },
-                      { name: "Jardiance", percentage: "13.9%" },
-                      { name: "Invokana", percentage: "13.5%" },
-                      { name: "Basalgar", percentage: "13.1%" },
-                      { name: "Glyburide", percentage: "12.8%" },
-                      { name: "Glimpepiride", percentage: "12.4%" },
-                      { name: "Amaryl", percentage: "12%" },
+                      { name: "Glucophage", percentage: "0.549%" },
+                      { name: "Levemir", percentage: "3.167%" },
+                      { name: "Glimepride", percentage: "0.513%" },
+                      { name: "Actos", percentage: "2.238%" },
+                      { name: "Jardiance", percentage: "1.22%" },
+                      { name: "Invokana", percentage: "1.032%" },
+                      { name: "Basalgar", percentage: "0.616%" },
+                      { name: "Glyburide", percentage: "0.554%" },
+                      { name: "Glimpepiride", percentage: "0.54%" },
+                      { name: "Amaryl", percentage: "0.405%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -126,16 +145,16 @@ export default function Content() {
                   </Col>
                   <Col lg={4}>
                     {[
-                      { name: "Januvia", percentage: "14.3%" },
-                      { name: "Janumet", percentage: "14%" },
-                      { name: "Oseni", percentage: "13.9%" },
-                      { name: "Pioglitazone", percentage: "13.5%" },
-                      { name: "Nesina", percentage: "12.9%" },
-                      { name: "Jentadueto", percentage: "12.5%" },
-                      { name: "Tradjenta", percentage: "10.1%" },
-                      { name: "Onglyza", percentage: "9.8%" },
-                      { name: "Evogliptin", percentage: "9.4%" },
-                      { name: "Omarigliptin", percentage: "8%" },
+                      { name: "Januvia", percentage: "1.828%" },
+                      { name: "Janumet", percentage: "0.477%" },
+                      { name: "Oseni", percentage: "0.133%" },
+                      { name: "Fortamet", percentage: "0.046%" },
+                      { name: "Nesina", percentage: "0.051%" },
+                      { name: "Jentadueto", percentage: "0.035%" },
+                      { name: "Tradjenta", percentage: "0.128%" },
+                      { name: "Onglyza", percentage: "0.179%" },
+                      { name: "Evogliptin", percentage: "0.09%" },
+                      { name: "Omarigliptin", percentage: "0.04%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -148,47 +167,82 @@ export default function Content() {
             </Col>
           </Row>
         </Container>
-        <Container>
+        <Container className="mt-2 p-3">
           <Card>
-          <Row>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Brochure1/>
-           </Card>
-            </Col>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Brochure2/>
-           </Card>
-            </Col>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Brochure3/>
-           </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Verbalcommunications1/>
-           </Card>
-            </Col>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Verbalcommunications2/>
-           </Card>
-            </Col>
-            <Col lg={4}>
-            <Card className="p-3 m-4">
-            <Verbalcommunications3/>
-           </Card>
-            </Col>
-          </Row>
-          
+            <Row>
+              <h6 className="chart-title m-3">Website</h6>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <WebsiteChart1 data={websiteData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <WebsiteChart2 data={websiteData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <WebsiteChart3 data={websiteData} />
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              <h6 className="chart-title m-3">TV Ads</h6>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <AdsChart1 data={adsData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <AdsChart2 data={adsData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <AdsChart3 data={adsData} />
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              <h6 className="chart-title m-3">Brochure</h6>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Brochure1 data={brochureData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Brochure2 data={brochureData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Brochure3 data={brochureData} />
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              <h6 className="chart-title m-3">Verbal Communications</h6>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Verbalcommunications1 data={verbalCommunicationsData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Verbalcommunications2 data={verbalCommunicationsData} />
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <Verbalcommunications3 data={verbalCommunicationsData} />
+                </Card>
+              </Col>
+            </Row>
           </Card>
         </Container>
-
-        
       </Container>
     </>
   );

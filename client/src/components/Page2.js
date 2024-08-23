@@ -1,14 +1,33 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { DiabetesDrugsChart1,DiabetesDrugsChart2,DiabetesDrugsChart3 } from "./DiabetesDrugsChart";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import {
+  DiabetesDrugsChart1,
+  DiabetesDrugsChart2,
+  DiabetesDrugsChart3,
+} from "./DiabetesDrugsChart";
 import { useNavigate } from "react-router-dom";
 
 import "./page2.css";
-import Content from "./Content";
+import HorizontalBarChartComponent from "./Clusteredgraph";
 
 export default function Page2() {
   const [selectedTopic, setSelectedTopic] = useState(null);
-
+  const data2 = [
+    { name: "Medication Adherence and Side Effects", value: 74779 },
+    { name: "Efficacy of Different Medications", value: 56635 },
+    { name: "Medication Adherence Challenges", value: 43887 },
+    { name: "Comparing Oral Medications and Insulin", value: 19027 },
+    { name: "New and Emerging Treatments", value: 8142 },
+    { name: "Cost and Accessibility of Medications", value: 4918 },
+  ];
   const CommentsData = [
     {
       Platform: "Reddit",
@@ -177,8 +196,6 @@ export default function Page2() {
   const summaryHandler = () => {
     navigate("/page2");
   };
-  
-
 
   const handleCardClick = (topic) => {
     setSelectedTopic(topic);
@@ -192,32 +209,32 @@ export default function Page2() {
   return (
     <>
       <Container fluid>
-        <div className="nav-container">
-          <span className="nav-title">Patient Centricity</span>
+        <Container className="nav-container">
+          <span className="nav-title ms-2">Patient Centricity</span>
           <div className="nav-container">
-          <div className="mt-2 p-1 filter-container">
-            <form>
-              <select id="disease" name="disease" className="forum-container">
-                <option value="" disabled selected>
-                  Filter by disease
-                </option>
-                <option value="disease1">Disease 1</option>
-                <option value="disease2">Disease 2</option>
-              </select>
-            </form>
-            <span className="menu-container" onClick={summaryHandler}>Summary</span> 
-            <span className="menu-container">Support</span>
-            <span className="menu-container" onClick={contentHandler}>
-              Content
-            </span>
-            <span className="menu-container">Product</span>
-            <span className="menu-container">Trial</span>
+            <div className="mt-2 p-3 filter-container">
+              <form>
+                <select id="disease" name="disease" className="forum-container">
+                  <option value="" disabled selected>
+                    Filter by disease
+                  </option>
+                  <option value="disease1">Type 2</option>
+                  <option value="disease2">Disease 2</option>
+                </select>
+              </form>
+              <span className="menu-container" onClick={summaryHandler}>
+                Summary
+              </span>
+              <span className="menu-container">Support</span>
+              <span className="menu-container" onClick={contentHandler}>
+                Content
+              </span>
+              <span className="menu-container">Product</span>
+              <span className="menu-container">Trial</span>
+            </div>
           </div>
-        </div>
+        </Container>
 
-        </div>
-
-        
         <Container>
           <Row>
             <Col lg={3}>
@@ -257,15 +274,15 @@ export default function Page2() {
                   { name: "Diabetes Daily Forum", percentage: "15%" },
                   { name: "TuDiabetes Forum", percentage: "14%" },
                   { name: "Drugs.com", percentage: "13%" },
-                  { name: "Patient.info Diabetes Forum", percentage: "10.5%" },
-                  { name: "Carenity Diabetes Community", percentage: "7.8%" },
+                  { name: "Patient.info Forum", percentage: "10.5%" },
+                  { name: "Carenity Diabetes", percentage: "7.8%" },
                   { name: "PatientLikeMe", percentage: "4.9%" },
                   {
-                    name: "Smart Patients - Type 2 Diabetes",
+                    name: "Smart Patients ",
                     percentage: "3.5%",
                   },
                   { name: "myDiabetes", percentage: "2%" },
-                  { name: "Beyond Type 2 Community", percentage: "0.6%" },
+                  { name: "Beyond Type 2", percentage: "0.6%" },
                 ].map((forum, index) => (
                   <div key={index} className="forum-container">
                     <span>{forum.name}</span>
@@ -281,16 +298,16 @@ export default function Page2() {
                 <Row>
                   <Col lg={4}>
                     {[
-                      { name: "Humalog", percentage: "24%" },
-                      { name: "Novolog", percentage: "16%" },
-                      { name: "Ozempic", percentage: "11%" },
-                      { name: "Glyburide", percentage: "10%" },
-                      { name: "Victoza", percentage: "9%" },
-                      { name: "Apidra", percentage: "8.5%" },
-                      { name: "Byetta", percentage: "7.8%" },
-                      { name: "Trulicity", percentage: "6.9%" },
-                      { name: "Asparat", percentage: "6.5%" },
-                      { name: "Fiasp", percentage: "6%" },
+                     { name: "Humalog", percentage: "5.94%" },
+                     { name: "Novolog", percentage: "4.05%" },
+                     { name: "Ozempic", percentage: "3.73%" },
+                     { name: "Diabeta", percentage: "0.02%" },
+                     { name: "Victoza", percentage: "2.03%" },
+                     { name: "Apidra", percentage: "1.52%" },
+                     { name: "Byetta", percentage: "1.36%" },
+                     { name: "Trulicity", percentage: "1.20%" },
+                     { name: "Aspart", percentage: "0.60%" },
+                     { name: "Fiasp", percentage: "0.37%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -301,16 +318,16 @@ export default function Page2() {
 
                   <Col lg={4}>
                     {[
-                      { name: "Metformin", percentage: "15.7%" },
-                      { name: "Levemir", percentage: "15.3%" },
-                      { name: "Glimepride", percentage: "14.9%" },
-                      { name: "Actos", percentage: "14.5%" },
-                      { name: "Jardiance", percentage: "13.9%" },
-                      { name: "Invokana", percentage: "13.5%" },
-                      { name: "Basalgar", percentage: "13.1%" },
-                      { name: "Glyburide", percentage: "12.8%" },
-                      { name: "Glimpepiride", percentage: "12.4%" },
-                      { name: "Amaryl", percentage: "12%" },
+                       { name: "Glucophage", percentage: "0.55%" },
+                       { name: "Levemir", percentage: "3.17%" },
+                       { name: "Glimepride", percentage: "0.51%" },
+                       { name: "Actos", percentage: "2.24%" },
+                       { name: "Jardiance", percentage: "1.22%" },
+                       { name: "Invokana", percentage: "1.03%" },
+                       { name: "Basalgar", percentage: "0.62%" },
+                       { name: "Glyburide", percentage: "0.55%" },
+                       { name: "Glimpepiride", percentage: "0.54%" },
+                       { name: "Amaryl", percentage: "0.41%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -320,16 +337,16 @@ export default function Page2() {
                   </Col>
                   <Col lg={4}>
                     {[
-                      { name: "Januvia", percentage: "14.3%" },
-                      { name: "Janumet", percentage: "14%" },
-                      { name: "Oseni", percentage: "13.9%" },
-                      { name: "Pioglitazone", percentage: "13.5%" },
-                      { name: "Nesina", percentage: "12.9%" },
-                      { name: "Jentadueto", percentage: "12.5%" },
-                      { name: "Tradjenta", percentage: "10.1%" },
-                      { name: "Onglyza", percentage: "9.8%" },
-                      { name: "Evogliptin", percentage: "9.4%" },
-                      { name: "Omarigliptin", percentage: "8%" },
+                      { name: "Januvia", percentage: "1.828%" },
+                      { name: "Janumet", percentage: "0.477%" },
+                      { name: "Oseni", percentage: "0.133%" },
+                      { name: "Fortamet", percentage: "0.046%" },
+                      { name: "Nesina", percentage: "0.051%" },
+                      { name: "Jentadueto", percentage: "0.035%" },
+                      { name: "Tradjenta", percentage: "0.128%" },
+                      { name: "Onglyza", percentage: "0.179%" },
+                      { name: "Evogliptin", percentage: "0.09%" },
+                      { name: "Omarigliptin", percentage: "0.04%" },
                     ].map((drug, index) => (
                       <div key={index} className="forum-container">
                         <span>{drug.name}</span>
@@ -343,34 +360,63 @@ export default function Page2() {
           </Row>
         </Container>
         <Container className="mt-2 p-3">
+        <Card className="mt-4 mb-4">
+          <div>
+            <span className="chart-title m-3">
+              Most frequent topics from topic modelling analysis, with
+              percentage of total text responses associated with that topic
+            </span>
+            <div className="chart-container">
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={data2} layout="vertical">
+                  <XAxis type="number" tick={false}/>
+                  <YAxis
+                    dataKey="name"
+                    type="category"
+                    tick={{ fill: "#666", fontSize: 10 }}
+                    width={200}
+                  />
+                  <Tooltip
+                    formatter={(value) =>
+                      new Intl.NumberFormat("en").format(value)
+                    }
+                  />
+                  <Bar dataKey="value" fill="#bc7ac4" barSize={25} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </Card>
           <Card>
-          <Container className="mb-3">
-          <Row>
-            <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart1 /> {/* Render the chart here */}
-              </Card>
-            </Col>
-            <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart2 /> {/* Render the chart here */}
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-          <Col lg={6}>
-              <Card className="p-3 mt-4">
-                <DiabetesDrugsChart3 /> {/* Render the chart here */}
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-           
+            <h6 className="chart-title m-3">Conversation Segments</h6>
+            <Row>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <DiabetesDrugsChart1 /> {/* Render the first chart */}
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <DiabetesDrugsChart2 /> {/* Render the second chart */}
+                </Card>
+              </Col>
+              <Col lg={4}>
+                <Card className="p-3 m-4">
+                  <DiabetesDrugsChart3 /> {/* Render the third chart */}
+                </Card>
+              </Col>
+            </Row>
           </Card>
+         
         </Container>
         <Container>
-        
+          <Card>
+          <span className="chart-title m-3">Sentiment Analysis</span>
+          <HorizontalBarChartComponent/>
+          </Card>
+        </Container>
 
+        <Container>
           <Row className="mt-2">
             <Col lg={3}>
               <Card
@@ -411,7 +457,7 @@ export default function Page2() {
           {filteredComments.map((comment, index) => (
             <Row key={index} className="m-3">
               <Card className="p-4 custom-card3">
-                <Card.Title>User</Card.Title>
+                <h6 className="chart-title">User</h6>
                 <div>
                   <span className="review">{comment.Content}</span>
                   <div className="c-button custom-button">
@@ -422,6 +468,7 @@ export default function Page2() {
             </Row>
           ))}
         </Container>
+        
       </Container>
     </>
   );

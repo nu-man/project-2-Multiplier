@@ -1,3 +1,8 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+
 .custom-card {
     display: flex;
     padding: 15px;
@@ -14,14 +19,14 @@
     line-height: 18px !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
-    
+
 }
 
 .number {
     color: #7C3A84;
 
     /* Bold/21px */
-  
+
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -154,13 +159,17 @@
 
 .nav-container {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+
+
 }
+
 .forum-container span {
-    margin-right: 10px; /* Adjust space between name and percentage */
-  }
+    margin-right: 10px;
+    /* Adjust space between name and percentage */
+}
+
 .nav-title {
     color: #7C3A84;
     font-feature-settings: 'cv03' on, 'cv04' on;
@@ -169,7 +178,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 145%;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     /* 36.25px */
 }
 
@@ -190,21 +199,24 @@
 .top-forum {
     color: #7C3A84;
     padding: 10px 20px;
-    font-family: "Plus Jakarta Sans";
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px;}
+    line-height: 20px;
+}
 
 .forum-container {
     color: #606368;
-    padding: 10px 20px; /* Adjusted padding to match the title */
-    font-family: "Plus Jakarta Sans";
+    padding: 10px 20px;
+    /* Adjusted padding to match the title */
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    text-align: justify; /* Ensures text alignment within the container */
+    text-align: justify;
+    /* Ensures text alignment within the container */
 }
 
 .custom-button {
@@ -233,23 +245,22 @@
     cursor: pointer;
 }
 
-.filter-container{
+.filter-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
     gap: 20px;
-    margin-right: 10px;
+    margin-right: -10px;
+    border: none;
 }
 
-.chart-title{
+.chart-title {
     color: #71717A !important;
-    font-size: 20px !important;
+    font-size: 1rem !important;
     font-style: normal !important;
     line-height: 15px !important;
     letter-spacing: 1px !important;
-  }
+    font-weight: 500;
+}
 
-  /* In your CSS file */
-
-  

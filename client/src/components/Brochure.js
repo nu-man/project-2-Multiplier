@@ -17,18 +17,18 @@ const data = [
   { name: "Novolog", value: 6 },
   { name: "Byetta", value: 6 },
   { name: "Apidra", value: 5 },
-  { name: "Glyburide", value: 4 },
+  { name: "Diabeta", value: 4 },
   { name: "Asparat", value: 3 },
   { name: "Fiasp", value: 3 },
 ];
 
 const data2 = [
-  { name: "Metformin", value: 87 },
+  { name: "Glocophage", value: 87 },
   { name: "Actos", value: 11 },
   { name: "Levemir", value: 7 },
   { name: "Jardiance", value: 5 },
   { name: "Invokana", value: 4 },
-  { name: "Glyburide", value: 4 },
+  { name: "Diabeta", value: 4 },
   { name: "Glimepride", value: 3 },
   { name: "Basalgar", value: 3 },
   { name: "Glimpepiride", value: 3 },
@@ -38,7 +38,7 @@ const data2 = [
 const data3 = [
   { name: "Januvia", value: 10 },
   { name: "Janumet", value: 6 },
-  { name: "Pioglitazone", value: 4 },
+  { name: "Actos", value: 4 },
   { name: "Onglyza", value: 4 },
   { name: "Oseni", value: 3 },
   { name: "Nesina", value: 3 },
@@ -51,7 +51,7 @@ const data3 = [
 const BrochureChart = ({ data, title }) => {
   return (
     <div style={{ width: "100%", height: 300 }}>
-      <h3 className="chart-title">{title}</h3>
+      <h6 className="chart-title">{title}</h6>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart layout="vertical" data={data}>
           <XAxis type="number" tick={false} />
@@ -70,11 +70,7 @@ const BrochureChart = ({ data, title }) => {
 };
 
 export const Brochure1 = () => (
-  <BrochureChart data={data} title="Brochure on weightloss" />
+  <BrochureChart data={data} title="Diabetes with Weightloss" />
 );
-export const Brochure2 = () => (
-  <BrochureChart data={data2} title="Brochure on Diabetes" />
-);
-export const Brochure3 = () => (
-  <BrochureChart data={data3} title="Brochure on Gliptins" />
-);
+export const Brochure2 = () => <BrochureChart data={data2} title="Diabetes" />;
+export const Brochure3 = () => <BrochureChart data={data3} title="Gliptins" />;

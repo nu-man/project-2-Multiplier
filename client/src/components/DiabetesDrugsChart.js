@@ -1,11 +1,9 @@
-// DiabetesDrugsChart.js
 import React from "react";
 import {
   BarChart,
   Bar,
   XAxis,
   YAxis,
-  Tooltip,
   ResponsiveContainer,
 } from "recharts";
 
@@ -13,7 +11,7 @@ const data = [
   { name: "Humalog", value: 1157 },
   { name: "Novolog", value: 789 },
   { name: "Ozempic", value: 727 },
-  { name: "Glyburide", value: 512 },
+  { name: "Diabeta", value: 512 },
   { name: "Victoza", value: 396 },
   { name: "Apidra", value: 297 },
   { name: "Byetta", value: 265 },
@@ -22,7 +20,7 @@ const data = [
   { name: "Fiasp", value: 73 },
 ];
 const data2 = [
-  { name: "Metformin", value: 5838 },
+  { name: "Glucophage", value: 5838 },
   { name: "Levemir", value: 618 },
   { name: "Glimepride", value: 445 },
   { name: "Actos", value: 437 },
@@ -52,15 +50,22 @@ const DiabetesDrugsChart = ({ data, title }) => {
       <h3 className="chart-title">{title}</h3>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart layout="vertical" data={data}>
-          <XAxis type="number" tick={false} />
+          <XAxis
+            type="number"
+            tick={false}
+            tickFormatter={(value) => `value: ${value}`}
+          />
           <YAxis
             dataKey="name"
             type="category"
             tick={{ fill: "#000", fontSize: "12px" }}
             width={80} // Adjust width as needed for label visibility
           />
-          <Tooltip />
-          <Bar dataKey="value" fill="#bc7ac4" />
+          {/* Tooltip removed */}
+          <Bar
+            dataKey="value"
+            fill="#bc7ac4"
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

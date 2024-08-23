@@ -10,7 +10,7 @@ import {
 } from "recharts";
 
 const data = [
-    { name: "Ozempic", value: 32 },
+    { name: "Ozempic", value:32 },
     { name: "Humalog", value: 27 },
     { name: "Victoza", value: 17 },
     { name: "Trulicity", value: 12 },
@@ -23,21 +23,21 @@ const data = [
   ];
   
   const data2 = [
-    { name: "Metformin", value: 119 },
+    { name: "Glocophage", value: 119 },
     { name: "Levemir", value: 18 },
     { name: "Jardiance", value: 17 },
     { name: "Actos", value: 10 },
     { name: "Invokana", value: 4 },
     { name: "Glimepride", value: 3 },
     { name: "Basalgar", value: 3 },
-    { name: "Glyburide", value: 3 },
+    { name: "Diabeta", value: 3 },
     { name: "Glimpepiride", value: 3 },
     { name: "Amaryl", value: 3 },
   ];
   
   const data3 = [
     { name: "Januvia", value: 17 },
-    { name: "Pioglitazone", value: 6 },
+    { name: "Actos", value: 6 },
     { name: "Janumet", value: 4 },
     { name: "Tradjenta", value: 4 },
     { name: "Oseni", value: 3 },
@@ -71,11 +71,11 @@ const VerbalCommunicationsChart = ({ data, title }) => {
 };
 
 export const Verbalcommunications1 = () => (
-  <VerbalCommunicationsChart data={data} title="Discussion on weightloss" />
+  <VerbalCommunicationsChart data={data} title="Diabetes with Weightloss" />
 );
 export const Verbalcommunications2 = () => (
-  <VerbalCommunicationsChart data={data2} title="Discussion on Diabetes" />
+  <VerbalCommunicationsChart data={data2} title="Diabetes" />
 );
 export const Verbalcommunications3 = () => (
-  <VerbalCommunicationsChart data={data3} title="Discussion on Gliptins" />
+  <VerbalCommunicationsChart data={data3} title="Gliptins" />
 );
